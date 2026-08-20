@@ -23,7 +23,7 @@ const rules = [
 ];
 
 const questions = [
-  { question: "What should I build?", answer: "Something you need—not another swap screen. Make the swap essential to a larger mobile, browser, game, or agent experience." },
+  { question: "What should I build?", answer: "Something you need,not another swap screen. Make the swap essential to a larger mobile, browser, game, or agent experience." },
   { question: "Do I need an API key?", answer: "No. Use devquote.api.DFlow.net during buildathon. It is free and rate-limited to 1 TPS." },
   { question: "Can I enter an existing product?", answer: "Not if it is already released to users. Buildathon is for new ideas and new product experiences." },
   { question: "Can my product earn fees?", answer: "Yes. Add platformFeeBps to a swap and keep 100% of that platform fee." },
