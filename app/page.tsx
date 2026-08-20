@@ -65,10 +65,10 @@ export default function Home() {
             <span className="title-ghost" aria-hidden="true">BUILDATHON</span>
             <h1 id="buildathon-title">BUILDATHON</h1>
           </div>
-          <p className="subhead">Build what happens after the swap.</p>
+          <p className="subhead">Build what happens after swap.</p>
           <p className="date-line"><span>Aug 21–31, 2026</span><i /><span>Demo Day · Sep 3 · Bangkok</span></p>
           <div className="actions">
-            <a className="button button--primary" href="https://forms.gle/WTkHAkujTB1HWfKb6" target="_blank" rel="noreferrer" aria-label="Apply to the Buildathon"><span>Apply Now</span><Arrow /></a>
+            <a className="button button--primary" href="https://forms.gle/WTkHAkujTB1HWfKb6" target="_blank" rel="noreferrer" aria-label="Apply to Buildathon"><span>Apply Now</span><Arrow /></a>
             <a className="button button--secondary" href={sitePath("/rules/")} aria-label="View Buildathon rules"><span>View Rules</span><span aria-hidden="true">↗</span></a>
           </div>
         </div>
