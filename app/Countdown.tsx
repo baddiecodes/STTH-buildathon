@@ -43,10 +43,10 @@ export default function Countdown() {
         <strong className="countdown-closed">Submissions closed</strong>
       ) : (
         <time className="countdown-time" dateTime="2026-08-31T23:59:00+07:00" aria-live="off">
-          <b>{remaining ? pad(remaining.days) : "--"}</b><small>D</small><i>:</i>
-          <b>{remaining ? pad(remaining.hours) : "--"}</b><small>H</small><i>:</i>
-          <b>{remaining ? pad(remaining.minutes) : "--"}</b><small>M</small><i>:</i>
-          <b>{remaining ? pad(remaining.seconds) : "--"}</b><small>S</small>
+          <b>{remaining ? pad(remaining.days) : "00"}</b><small>D</small><i>:</i>
+          <b>{remaining ? pad(remaining.hours) : "00"}</b><small>H</small><i>:</i>
+          <b>{remaining ? pad(remaining.minutes) : "00"}</b><small>M</small><i>:</i>
+          <b>{remaining ? pad(remaining.seconds) : "00"}</b><small>S</small>
         </time>
       )}
     </div>

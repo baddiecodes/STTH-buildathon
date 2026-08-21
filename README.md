@@ -23,7 +23,7 @@ Use DFlow to create a useful product experience that begins where the swap ends.
 We are looking for:
 
 - A clear user problem and a product people could genuinely use.
-- A meaningful DFlow integration, not a reskinned swap interface.
+- A meaningful DFlow integration—not a reskinned swap interface.
 - Creative thinking, clarity, usefulness, and evidence that you shipped.
 - A working demo, product write-up, and public demo link or code repository.
 
