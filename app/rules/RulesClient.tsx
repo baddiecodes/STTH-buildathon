@@ -17,9 +17,9 @@ const rules = [
   { number: "01", title: "Who can build", text: "Build solo or in a team of up to four. Projects already released to users are not eligible." },
   { number: "02", title: "Build window", text: "Build and submit from Aug 21 to 31, 2026. Deadline: 23:59 ICT on Aug 31." },
   { number: "03", title: "The brief", text: "Use DFlow to create a useful product experience that begins where the swap ends." },
-  { number: "04", title: "What to submit", text: "Share a working demo, a clear product summary, and a public demo link or code repository." },
+  { number: "04", title: "What to submit", text: "Your final submission should include a working build, a two minute demo video, a public demo link or code repository, and a clear explanation of how DFlow powers the product." },
   { number: "05", title: "How we judge", text: "Creative ideas matter more than perfect code. We value usefulness, clarity, execution, and originality." },
-  { number: "06", title: "Demo day + prize", text: "Selected teams present Sep 3 in Bangkok. The total prize pool is 1,000 USDC." },
+  { number: "06", title: "Finalists + prize", text: "Finalists are announced September 1 and present September 3 in Bangkok. The 1,000 USDC prize split is 500 / 300 / 200 USDC." },
 ];
 
 const questions = [
@@ -31,14 +31,40 @@ const questions = [
   { question: "What matters to judges?", answer: "Creative thinking, a clear user need, a useful DFlow integration, and evidence that you shipped." },
 ];
 
-const recap = [
-  { label: "What it is", value: "A free DEX aggregator API routing across ~15 Solana venues, with JIT rerouting at execution." },
-  { label: "Builder upside", value: "Add platformFeeBps and keep 100% of the fee. Sponsor gas for a smoother user experience." },
-  { label: "Dev endpoint", value: "devquote.api.DFlow.net · free · 1 TPS · no API key required." },
-  { label: "Core flow", value: "Call order → receive transaction → user signs → submit through any Solana RPC." },
-  { label: "Proof", value: "$67B+ processed · ~850k monthly traders · 100× YoY growth." },
-  { label: "Buildathon lens", value: "Creative ideas over perfect code. Build something you need; released projects are ineligible." },
-];
+const recaps = {
+  workshop1: {
+    label: "Workshop 01 / Recap",
+    title: "FROM QUOTE TO SIGNED SWAP",
+    resource: "devquote.api.DFlow.net",
+    resourceNote: "Use DFlow Agent Skills in the docs for faster app scaffolding.",
+    link: "https://luma.com/vxj5v1pu",
+    items: [
+      { label: "What it is", value: "A free DEX aggregator API routing across ~15 Solana venues, with JIT rerouting at execution." },
+      { label: "Builder upside", value: "Add platformFeeBps and keep 100% of the fee. Sponsor gas for a smoother user experience." },
+      { label: "Dev endpoint", value: "devquote.api.DFlow.net · free · 1 TPS · no API key required." },
+      { label: "Core flow", value: "Call order → receive transaction → user signs → submit through any Solana RPC." },
+      { label: "Proof", value: "$67B+ processed · ~850k monthly traders · 100× YoY growth." },
+      { label: "Buildathon lens", value: "Creative ideas over perfect code. Build something you need; released projects are ineligible." },
+    ],
+  },
+  workshop2: {
+    label: "Workshop 02 / Recap",
+    title: "SOCIAL + AGENTIC COMMERCE",
+    resource: "Open Wallet Standard",
+    resourceNote: "A free Rust and TypeScript toolkit for secure wallets with spending policies and allow lists.",
+    link: "https://luma.com/zsvaojvq",
+    items: [
+      { label: "Social commerce", value: "Fun drives retention. Trading products become more engaging when activity, discovery, and participation feel social." },
+      { label: "Two routes", value: "Build a broad network or place tools inside communities people already use. For small teams, the embedded route is more accessible." },
+      { label: "FOMO proof", value: "FOMO reached about 30k new users per day. On Aug 18, DFlow handled $80M of more than $100M in spot volume." },
+      { label: "Agentic value", value: "The opportunity is simplifying complex workflows with natural language, not merely adding crypto payments." },
+      { label: "Southeast Asia", value: "A local commerce agent could compare prices and reviews, recommend products, and automate purchases across regional marketplaces." },
+      { label: "Secure wallets", value: "Open Wallet Standard supports local execution, spending limits, and allow lists so builders can focus on the product logic." },
+    ],
+  },
+};
+
+type RecapId = keyof typeof recaps;
 
 function BrandLockup() {
   return (
@@ -52,7 +78,8 @@ function BrandLockup() {
 
 export default function RulesClient() {
   const [panel, setPanel] = useState<Panel>("rules");
-  const [showRecap, setShowRecap] = useState(false);
+  const [activeRecap, setActiveRecap] = useState<RecapId | null>(null);
+  const recap = activeRecap ? recaps[activeRecap] : null;
 
   return (
     <main className="launch-shell rules-shell">
@@ -76,7 +103,7 @@ export default function RulesClient() {
           </div>
           <nav className="rules-tabs" aria-label="Buildathon resources">
             {panels.map((item, index) => (
-              <button key={item.id} className={panel === item.id ? "is-active" : ""} onClick={() => { setPanel(item.id); setShowRecap(false); }} type="button">
+              <button key={item.id} className={panel === item.id ? "is-active" : ""} onClick={() => { setPanel(item.id); setActiveRecap(null); }} type="button">
                 <span>0{index + 1}</span>{item.label}
               </button>
             ))}
@@ -117,17 +144,18 @@ export default function RulesClient() {
                 <p>Understand JIT routing, complete the quote to swap flow, and learn how builders monetize.</p>
                 <div className="workshop-actions">
                   <a href="https://luma.com/vxj5v1pu" target="_blank" rel="noreferrer">View on Luma ↗</a>
-                  <button type="button" onClick={() => setShowRecap(true)}>Open recap →</button>
+                  <button type="button" onClick={() => setActiveRecap("workshop1")}>Open recap →</button>
                 </div>
               </article>
 
               <article className="workshop-card">
-                <div className="workshop-topline"><span>Workshop 02</span><b>Aug 21</b></div>
+                <div className="workshop-topline"><span>Workshop 02</span><b>Recap ready</b></div>
                 <p className="workshop-date">Aug 21 · 13:30 to 14:30 ICT · Online</p>
                 <h2>Ship a Seeker Game<br />Economy with DFlow</h2>
-                <p>Use a mobile game economy pattern to turn in game currency into SOL. Then shape your own product.</p>
+                <p>Explore social trading, agentic commerce, and local product ideas built around DFlow.</p>
                 <div className="workshop-actions">
-                  <a href="https://luma.com/zsvaojvq" target="_blank" rel="noreferrer">Register on Luma ↗</a>
+                  <a href="https://luma.com/zsvaojvq" target="_blank" rel="noreferrer">View on Luma ↗</a>
+                  <button type="button" onClick={() => setActiveRecap("workshop2")}>Open recap →</button>
                 </div>
               </article>
             </div>
@@ -151,21 +179,21 @@ export default function RulesClient() {
         </div>
       </section>
 
-      {showRecap && (
+      {recap && (
         <section className="recap-overlay" role="dialog" aria-modal="true" aria-labelledby="recap-title">
           <div className="recap-head">
-            <div><span>Workshop 01 / Recap</span><h2 id="recap-title">FROM QUOTE TO SIGNED SWAP</h2></div>
-            <button type="button" onClick={() => setShowRecap(false)} aria-label="Close recap">Close ×</button>
+            <div><span>{recap.label}</span><h2 id="recap-title">{recap.title}</h2></div>
+            <button type="button" onClick={() => setActiveRecap(null)} aria-label="Close recap">Close ×</button>
           </div>
           <div className="recap-grid">
-            {recap.map((item, index) => (
+            {recap.items.map((item, index) => (
               <article key={item.label}><span>0{index + 1}</span><h3>{item.label}</h3><p>{item.value}</p></article>
             ))}
           </div>
           <div className="recap-resource">
-            <code>devquote.api.DFlow.net</code>
-            <span>Use DFlow Agent Skills in the docs for faster app scaffolding.</span>
-            <a href="https://luma.com/vxj5v1pu" target="_blank" rel="noreferrer">Workshop page ↗</a>
+            <code>{recap.resource}</code>
+            <span>{recap.resourceNote}</span>
+            <a href={recap.link} target="_blank" rel="noreferrer">Workshop page ↗</a>
           </div>
         </section>
       )}

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Build what happens after the swap.",
     images: [sitePath("/og.png")],
   },
-  icons: { icon: sitePath("/favicon.svg"), shortcut: sitePath("/favicon.svg") },
+  icons: { icon: sitePath("/favicon.ico"), shortcut: sitePath("/favicon.ico") },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

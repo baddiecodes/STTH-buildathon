@@ -280,7 +280,7 @@ h1 { position: relative; z-index: 2; color: var(--paper); text-shadow: 0 10px 50
   .rules-tabs button:hover, .rules-tabs button:focus-visible, .rules-tabs button.is-active { padding-left: 0; }
   .rules-tabs button.is-active::after { display: none; }
   .rules-panel, .rules-grid, .qa-grid { width: 100%; }
-  .rule-card, .qa-card { min-height: 89px; padding: 10px; }
+  .rule-card, .qa-card { min-height: 106px; padding: 9px 10px; }
   .rule-card h2, .qa-card h2 { margin: 5px 0 3px; font-size: 11px; }
   .rule-card p, .qa-card p { font-size: 9.5px; line-height: 1.3; }
   .rule-number { font-size: 9px; }
