@@ -4,14 +4,14 @@
 
 A focused buildathon for builders creating useful products with DFlow on Solana. The goal is not another swap screen—it is the game, agent, consumer app, payment flow, or product experience that becomes possible after the swap.
 
-**[Apply now](https://forms.gle/WTkHAkujTB1HWfKb6)** · **[View the live site](https://dflow-thailand-buildathon.mewtwo792796.chatgpt.site)**
+**[Apply now](https://forms.gle/WTkHAkujTB1HWfKb6)** · **[View the live site](https://stth-buildathon.vercel.app)**
 
 ## Event details
 
 | | |
 | --- | --- |
 | Build window | Aug 21–31, 2026 |
-| Submission deadline | Aug 31, 2026 · 23:59 ICT |
+| Submission deadline | Sep 2, 2026 · 23:59 ICT |
 | Demo Day | Sep 3, 2026 · Bangkok |
 | Prize pool | 1,000 USDC |
 | Team size | 1–4 builders |
@@ -65,7 +65,7 @@ Learn how a mobile game economy can turn in-game currency into SOL and become a 
 
 ## Buildathon rules
 
-The full Rules, Q&A, Workshops, recap, and Docs are available on the [`/rules/`](https://dflow-thailand-buildathon.mewtwo792796.chatgpt.site/rules) page.
+The full Rules, Q&A, Workshops, recap, and Docs are available on the [`/rules/`](https://stth-buildathon.vercel.app/rules) page.
 
 ## Run locally
 
@@ -146,10 +146,11 @@ package.json
 - CSS animations and responsive layouts
 - Static export for Vercel and GitHub Pages
 
-## Superteam Thailand
+  MIT
 
-- [X](https://x.com/superteamth)
-- [Instagram](https://instagram.com/superteamthailand)
-- [Telegram](https://t.me/superteamth)
+## Mewtu 
 
-Built by Superteam Thailand with DFlow for builders who are ready to ship.
+- [X](https://x.com/mewtuta)
+- [Instagram](https://instagram.com/mewtuta)
+
+Built by Mewtu with DFlow for builders who are ready to ship.
