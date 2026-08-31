@@ -76,7 +76,6 @@ export default function Home() {
 
       <footer className="bottom-rail">
         <nav className="social-links" aria-label="Social media links">
-          <label="Built by Mewtuta" />
           <a href="https://x.com/mewtuta" target="_blank" rel="noreferrer" aria-label="Mewtuta on X">X ↗</a>
           <a href="https://instagram.com/mewtuta" target="_blank" rel="noreferrer" aria-label="Mewtuta on Instagram">IG ↗</a>
           <a href="https://t.me/superteamth" target="_blank" rel="noreferrer" aria-label="Superteam Thailand on Telegram">TG ↗</a>
