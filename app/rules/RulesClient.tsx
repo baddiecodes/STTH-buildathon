@@ -15,7 +15,7 @@ const panels: { id: Panel; label: string }[] = [
 
 const rules = [
   { number: "01", title: "Who can build", text: "Build solo or in a team of up to four. Projects already released to users are not eligible." },
-  { number: "02", title: "Build window", text: "Build and submit from Aug 21 to 31, 2026. Deadline: 23:59 ICT on Aug 31." },
+  { number: "02", title: "Build window", text: "Build and submit from Aug 21 to Sep 2, 2026. Deadline: 23:59 ICT on Sep 2." },
   { number: "03", title: "The brief", text: "Use DFlow to create a useful product experience that begins where the swap ends." },
   { number: "04", title: "What to submit", text: "Your final submission should include a working build, a two minute demo video, a public demo link or code repository, and a clear explanation of how DFlow powers the product." },
   { number: "05", title: "How we judge", text: "Creative ideas matter more than perfect code. We value usefulness, clarity, execution, and originality." },
@@ -205,7 +205,7 @@ export default function RulesClient() {
             <a href="https://instagram.com/superteamthailand" target="_blank" rel="noreferrer" aria-label="Superteam Thailand on Instagram">IG ↗</a>
             <a href="https://t.me/superteamth" target="_blank" rel="noreferrer" aria-label="Superteam Thailand on Telegram">TG ↗</a>
           </nav>
-          <span className="rules-footer-note">Aug 21 to 31 · Demo Day Sep 3 · Bangkok</span>
+          <span className="rules-footer-note">Aug 21 to Sep 2 · Demo Day Sep 3 · Bangkok</span>
         </div>
         <a className="button button--secondary" href={sitePath("/")}><span>Back to Buildathon</span><span aria-hidden="true">←</span></a>
         <a className="button button--primary" href="https://forms.gle/WTkHAkujTB1HWfKb6" target="_blank" rel="noreferrer"><span>Apply Now</span><span aria-hidden="true">↗</span></a>
