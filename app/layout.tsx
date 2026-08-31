@@ -10,7 +10,7 @@ const pagesOrigin = process.env.GITHUB_ACTIONS === "true" && githubOwner
 export const metadata: Metadata = {
   metadataBase: new URL(pagesOrigin),
   title: "BUILDATHON | DFlow × Superteam Thailand",
-  description: "Build what happens after the swap. Aug 21 to 31, 2026. Demo Day Sep 3 in Bangkok. 1,000 USDC prize pool.",
+  description: "Build what happens after the swap. Aug 21 to Sep 2, 2026. Demo Day Sep 3 in Bangkok. 1,000 USDC prize pool.",
   openGraph: {
     title: "BUILDATHON | DFlow × Superteam Thailand",
     description: "Build what happens after the swap.",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "BUILDATHON | DFlow × Superteam Thailand",
-    description: "Build what happens after the swap.",
+    description: "Build what happens after swap.",
     images: [sitePath("/og.png")],
   },
   icons: { icon: sitePath("/favicon.ico"), shortcut: sitePath("/favicon.ico") },
