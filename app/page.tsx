@@ -65,8 +65,8 @@ export default function Home() {
             <span className="title-ghost" aria-hidden="true">BUILDATHON</span>
             <h1 id="buildathon-title">BUILDATHON</h1>
           </div>
-          <p className="subhead">Build what happens after the swap.</p>
-          <p className="date-line"><span>Aug 21 to 31, 2026</span><i /><span>Demo Day · Sep 3 · Bangkok</span></p>
+          <p className="subhead">Build what happens after swap.</p>
+          <p className="date-line"><span>Aug 21 to Sep 2, 2026</span><i /><span>Demo Day · Sep 3 · Bangkok</span></p>
           <div className="actions">
             <a className="button button--primary" href="https://forms.gle/WTkHAkujTB1HWfKb6" target="_blank" rel="noreferrer" aria-label="Apply to the Buildathon"><span>Apply Now</span><Arrow /></a>
             <a className="button button--secondary" href={sitePath("/rules/")} aria-label="View Buildathon rules"><span>View Rules</span><span aria-hidden="true">↗</span></a>
@@ -76,8 +76,9 @@ export default function Home() {
 
       <footer className="bottom-rail">
         <nav className="social-links" aria-label="Social media links">
-          <a href="https://x.com/superteamth" target="_blank" rel="noreferrer" aria-label="Superteam Thailand on X">X ↗</a>
-          <a href="https://instagram.com/superteamthailand" target="_blank" rel="noreferrer" aria-label="Superteam Thailand on Instagram">IG ↗</a>
+          <label="Built by Mewtuta" />
+          <a href="https://x.com/mewtuta" target="_blank" rel="noreferrer" aria-label="Mewtuta on X">X ↗</a>
+          <a href="https://instagram.com/mewtuta" target="_blank" rel="noreferrer" aria-label="Mewtuta on Instagram">IG ↗</a>
           <a href="https://t.me/superteamth" target="_blank" rel="noreferrer" aria-label="Superteam Thailand on Telegram">TG ↗</a>
         </nav>
         <Countdown />
