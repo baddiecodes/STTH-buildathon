@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const DEADLINE = new Date("2026-08-31T23:59:00+07:00").getTime();
+const DEADLINE = new Date("2026-09-02T23:59:00+07:00").getTime();
 
 type Remaining = {
   days: number;
@@ -37,12 +37,12 @@ export default function Countdown() {
   }, []);
 
   return (
-    <div className="meta-block countdown-block" aria-label="Submission deadline: August 31, 2026 at 11:59 PM ICT">
+    <div className="meta-block countdown-block" aria-label="Submission deadline: September 02, 2026 at 11:59 PM ICT">
       <span>Submission closes in</span>
       {remaining?.closed ? (
         <strong className="countdown-closed">Submissions closed</strong>
       ) : (
-        <time className="countdown-time" dateTime="2026-08-31T23:59:00+07:00" aria-live="off">
+        <time className="countdown-time" dateTime="2026-09-02T23:59:00+07:00" aria-live="off">
           <b>{remaining ? pad(remaining.days) : "00"}</b><small>D</small><i>:</i>
           <b>{remaining ? pad(remaining.hours) : "00"}</b><small>H</small><i>:</i>
           <b>{remaining ? pad(remaining.minutes) : "00"}</b><small>M</small><i>:</i>
